@@ -9,8 +9,16 @@
   <% @week_days.each do |day| %>
     <div class='item'>
       <div class='date'>
+<<<<<<< Updated upstream
 
         <%= day[:month] %>/<%= day[:date] %><%= day[:wday] %>
+=======
+<<<<<<< HEAD
+        <% day[:month] %>/<% day[:date] %>
+=======
+        <%= day[:month] %>/<%= day[:date] %><%= day[:wday] %>
+>>>>>>> parent of 19acdf1... Merge branch 'master' into first_training
+>>>>>>> Stashed changes
       </div>
       <ul class='content'>
       <% if day[:plans].length != 0 %>
