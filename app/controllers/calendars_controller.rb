@@ -19,18 +19,8 @@ class CalendarsController < ApplicationController
   end
 
   def get_week
-<<<<<<< Updated upstream
 
     wdays = ['(日)','(月)','(火)','(水)','(木)','(金)','(土)']
-
-=======
-<<<<<<< HEAD
-    week_days = ['(日)','(月)','(火)','(水)','(木)','(金)','(土)']
-=======
-    wdays = ['(日)','(月)','(火)','(水)','(木)','(金)','(土)']
->>>>>>> parent of 19acdf1... Merge branch 'master' into first_training
->>>>>>> Stashed changes
-
     # Dateオブジェクトは、日付を保持しています。下記のように`.today.day`とすると、今日の日付を取得できます。
     @todays_date = Date.today
     # 例)　今日が2月1日の場合・・・ Date.today.day => 1日
@@ -45,28 +35,12 @@ class CalendarsController < ApplicationController
       plans.each do |plan|
         today_plans.push(plan.plan) if plan.date == @todays_date + x
       end
-<<<<<<< Updated upstream
-
-=======
-<<<<<<< HEAD
-      days = { month: (@todays_date + x).month, date: (@todays_date+x).day, plans: today_plans}
-=======
->>>>>>> Stashed changes
-
-
-      
       days = { month: (@todays_date + x).month, date: (@todays_date+x).day, plans: today_plans, wday:(wdays[wday_num.to_i])}
       wday_num +=1
       if wday_num >= 7
         wday_num = wday_num -7
       end
-<<<<<<< Updated upstream
-=======
->>>>>>> parent of 19acdf1... Merge branch 'master' into first_training
->>>>>>> Stashed changes
       @week_days.push(days)
     end
-
   end
 end
-
