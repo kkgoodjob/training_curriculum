@@ -1,4 +1,4 @@
-<%= form_with model: @plan, url: calendars_path, class: 'form' ,method: 'post' do |f| %>
+<%= form_with model: @plan, url: calendars_path, class: 'form' do |f| %>
   <%= f.label :日付を選択, class: 'lavel' %>
   <%= f.date_field :date, class: 'date-select' %>
   <%= f.label :予定を入力, class: 'lavel' %>
@@ -9,16 +9,7 @@
   <% @week_days.each do |day| %>
     <div class='item'>
       <div class='date'>
-<<<<<<< Updated upstream
-
         <%= day[:month] %>/<%= day[:date] %><%= day[:wday] %>
-=======
-<<<<<<< HEAD
-        <% day[:month] %>/<% day[:date] %>
-=======
-        <%= day[:month] %>/<%= day[:date] %><%= day[:wday] %>
->>>>>>> parent of 19acdf1... Merge branch 'master' into first_training
->>>>>>> Stashed changes
       </div>
       <ul class='content'>
       <% if day[:plans].length != 0 %>
